@@ -1,0 +1,749 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Scroll página */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #171717;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* transform: translate(100px); */
+  background: #9f3647;
+}
+
+/* Handle active */
+::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9f3647;
+}
+
+/* Header para escritorio */
+header {
+  background-color: #9f3647;
+  color: #fff;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header nav {
+  display: flex; /* 
+    flex-flow: row wrap; */
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40px;
+  padding: 1.5rem 0;
+}
+
+header nav .logo {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  /* flex-flow: row nowrap; */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  margin-right: initial;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+header nav ul li a:hover {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+header nav ul li .iniciarSesion {
+  background-color: #000;
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  &:hover {
+    background-color: #9f3647;
+  }
+}
+
+/* Header para celular */
+
+@media (max-width: 700px) {
+  header {
+    height: initial;
+  }
+  header nav {
+    margin: 0 10px;
+    flex-direction: column;
+    row-gap: 15px;
+    padding: initial;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul {
+    padding: 0;
+    padding-bottom: 0.3rem;
+  }
+  header nav ul li {
+    margin-right: 10px;
+  }
+  header nav ul li a {
+    font-weight: 400;
+    margin-right: initial;
+    font-size: 0.9rem;
+    padding: 0.2rem;
+  }
+}
+
+/* Main para escritorio */
+main {
+  background-color: #181419;
+}
+
+#inicio .banner {
+  background-image: url(../img/banner.avif);
+  color: #fff;
+}
+main .banner {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+main .banner h1 {
+  font-size: 3.5rem;
+  font-weight: 650;
+  margin-bottom: 1rem;
+}
+
+main .banner h2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+main .banner .btn-register {
+  background-color: #9f3647;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  border: 0;
+  border-radius: 7px;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 90;
+}
+main .banner button:hover {
+  background-color: #9f3647;
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.btn-register a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main .buscador {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.buscador .pregunta {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.buscador .input-btn {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.buscador .input-btn .search {
+  padding: 0 20px;
+  width: 500px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.buscador .input-btn button {
+  background-color: #9f3647;
+  padding: 0.7rem 1.5rem;
+  font-weight: 700;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  transition: 0.3s;
+  margin-left: 10px;
+  color: #fff;
+}
+
+.buscador .input-btn button:hover {
+  background-color: #9f3647;
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+main .cartelera {
+  text-align: center;
+  color: #fff;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.cartelera .hr {
+  border: 1px solid #9f3647;
+  margin-top: 40px;
+}
+
+.cartelera h3 {
+  margin-top: 10px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.cartelera .peliculas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.cartelera .peliculas .peli {
+  transition: all 0.5s;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/*  */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+}
+
+.peli:hover .overlay {
+  opacity: 1;
+  backdrop-filter: blur(2px);
+}
+
+.texto {
+  font-family: "Oswald", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.cartelera .peliculas .peli img {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.cartelera .peliculas .peli:hover {
+  transform: scale(0.9);
+  box-shadow: 3px 5px 10px hsla(359, 96%, 50%, 0.3);
+}
+
+.cartelera .btn-ant {
+  background-color: #9f3647;
+  padding: 1rem 1.2rem;
+  font-weight: 500;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  margin: 3rem 10px 5rem 10px;
+  transition: all 0.3s;
+  color: #fff;
+  &:hover {
+    background-color: #9f3647;
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.cartelera .btn-sig {
+  background-color: #9f3647;
+  padding: 1rem 1.2rem;
+  font-weight: 500;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  margin: 3rem 10px 5rem 10px;
+  transition: all 0.3s;
+  color: #fff;
+  &:hover {
+    background-color: #9f3647;
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+}
+
+main .aclamadas {
+  text-align: center;
+  color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.aclamadas h3 {
+  margin-top: 10px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+/* Aclamadas */
+.pelis {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  --altoImg: 250px;
+  --anchoImg: 160px;
+  padding: 0 0 5rem 0;
+  background-color: #00000080;
+  overflow-x: scroll;
+  height: calc(var(--altoImg) + 200px);
+  /* para que el scroll se ajuste al elemento mas cercano */
+  scroll-snap-type: x mandatory;
+  /* perspective: 100px; // la perspectiva no va en el misco contenedor que se le aplique 3D, va en el elemento padre*/
+  /* para agregarle profundidad a los elemento */
+  perspective: 40em;
+  /* el vacio de los laterales de la caja para que se muestren todas la img bien */
+  .peli:first-of-type {
+    margin-left: calc(50% - (var(--anchoImg) / 2));
+  }
+  .peli:last-of-type {
+    margin-right: calc(50% - (var(--anchoImg) / 2));
+  }
+  .peli {
+    /* para que el scroll centre al objeto mas cercano*/
+    scroll-snap-align: center;
+    /* animacion incorporadas*/
+    /* no me deja colocar todo en la propiedad "animacion"  */
+    /* animation: rotacion-img 1s --subjectReveal both ; */
+    view-timeline: --subjectReveal inline;
+    animation-timeline: --subjectReveal;
+    animation-name: rotacion-img;
+    animation-fill-mode: both;
+    &:hover {
+      cursor: pointer;
+    }
+    img {
+      height: var(--altoImg);
+      width: var(--anchoImg);
+      /* reflejo de las imagenes*/
+      -webkit-box-reflect: below 0.5em
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
+      border-radius: 7px;
+    }
+  }
+}
+@keyframes rotacion-img {
+  0% {
+    transform: rotateY(-45deg);
+    z-index: 1;
+  }
+  35% {
+    transform: rotateY(-45deg);
+  }
+  50% {
+    transform: rotateY(0deg) scale(1.3);
+    z-index: 100;
+  }
+  65% {
+    transform: rotateY(45deg);
+  }
+  100% {
+    transform: rotateY(45deg);
+    z-index: 1;
+  }
+}
+main .inicio {
+  background-color: #9f3647;
+  border: 2px solid #000;
+  border-radius: 50%;
+  padding: 0.2rem 0.3rem;
+  margin: 20px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+main .inicio a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Main para celular */
+
+@media (max-width: 770px) {
+  main .banner {
+    height: 60vh;
+  }
+  main .banner h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  main .banner h2 {
+    font-size: 1.5rem;
+    font-weight: 350;
+  }
+  main .banner .btn-register {
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+  }
+  main .buscador {
+    height: 30vh;
+  }
+  .buscador .pregunta {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  main .buscador .input-btn .search {
+    width: 260px;
+    height: 45px;
+  }
+  .buscador .input-btn button {
+    background-color: #9f3647;
+    padding: 0rem 1.2rem;
+    font-weight: 500;
+    height: 45px;
+  }
+  .cartelera h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  .cartelera .peliculas .peli {
+    width: 350px;
+    height: 500px;
+  }
+  .cartelera .peliculas .peli img {
+    width: 350px;
+    height: 500px;
+  }
+}
+
+/* Footer para escritorio */
+
+footer {
+  background-color: #9f3647;
+  padding: 3rem;
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+footer nav ul li {
+  margin: 0px 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+footer nav ul li .adm-pelis {
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  background-color: #000;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Footer para celular */
+
+@media (max-width: 770px) {
+  footer {
+    height: initial;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+  footer nav ul {
+    display: list-item;
+    text-align: center;
+    padding: 0px;
+  }
+  footer nav ul li {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .adm-pelis {
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ---------------- Pagina de la pelicula ----------------*/
+/* Section de peliculas */
+main .bannerMovie {
+  font-weight: 600;
+  min-height: 90vh;
+}
+.bannerMovie .banner-background {
+  padding-top: 50px;
+  position: relative;
+  height: auto;
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+.banner-background {
+  background: linear-gradient(0deg, #272020 5%, #a89b9b0d 10%);
+}
+
+.banner-background .banner-content {
+  
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+  column-gap: 60px;
+  color: #fff;
+}
+
+.banner-content .peli-img {
+  width: 300px;
+  height: 450px;
+}
+.banner-content .peli-img img {
+  width: 300px;
+  height: 450px;
+  border-radius: 9px;
+  overflow: clip;
+}
+
+.banner-content .detalles h2 {
+  background-color: #000000a2;
+  position: relative;
+}
+
+.banner-content .detalles div p {
+  background-color: #000000a2;
+  position: relative;
+}
+
+.detalles .masDetalles {
+  margin-top: 20px;
+  columns: 2;
+}
+.detalles .masDetalles ul {
+  list-style: none;
+  background-color: #000000a2;
+  padding: 0 1%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.resaltador::before {
+  left: -5px;
+  top: 0;
+  position: absolute;
+  display: inline-block;
+  background-color: #9f3647;
+  width: 5px;
+  height: 100%;
+  content: "";
+}
+
+/* --------- */
+/* Section de Trailer de peliculas */
+.section-dos {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0 auto;
+  color: #fff;
+  padding-bottom: 4rem;
+
+  .trailer h2 {
+    margin-bottom: 20px;
+  }
+  .trailer{
+    width: 100%;
+
+  }
+  .video-container {
+    width: 100%;
+  }
+  
+}
+iframe{
+  width: 100%;
+  height: 85vh;
+}
+.info-trailer {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.info-trailer .iconos {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin-bottom: 50px;
+}
+
+.info-trailer .iconos a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.info-trailer .detalles-extras {
+  margin-top: 20px;
+  columns: 2;
+}
+
+.info-trailer .detalles-extras ul {
+  list-style: none;
+}
+
+.info-trailer .detalles-extras ul li {
+  margin-bottom: 20px;
+}
+
+
+
+
+/* ------------ */
+/* Pagina de la pelicula para celu */
+
+@media (min-width:1500px) {
+  iframe{
+    height: 60dvh;
+  }
+}
+
+@media (min-width:1001px) {
+  iframe{
+    height: 50vh;
+  }
+}
+
+@media (max-width: 1000px) {
+  .bannerMovie {
+    height: initial;
+  }
+  .bannerMovie .banner-background {
+    height: auto; 
+    min-height: 90vh; 
+  }
+
+  .banner-background .banner-content {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .detalles .masDetalles {
+    columns: 1;
+  }
+
+  .section-dos {
+    flex-direction: column;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .video-container {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 20px;
+    iframe{
+      width: 100%;
+      height: 40dvh;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .section-dos{
+   width: 100%;
+  }
+  .video-container {
+    width: 100%;
+    max-width: auto;
+    margin-bottom: 20px;
+    iframe{
+      margin: auto 20px;
+      width: 90%;
+      height: 30dvh;
+    }
+  }
+ }

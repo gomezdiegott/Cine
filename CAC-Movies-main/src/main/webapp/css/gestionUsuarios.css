@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family:  sans-serif;
+    min-height: 100vh;
+    color: #fff;
+    background-color: #171717;
+}
+header div a {
+    font-family: "Nunito";
+    text-decoration: none;
+    color: #fff;
+}
+.logo {
+    margin: 1rem;
+    font-weight: 900;
+    font-size: 2rem;
+}
+table{
+    margin-top: 2rem;
+    width: 100%;
+}
+h1{
+    text-align: center;
+}
+.table thead tr {
+    columns: 8;
+}
+
+tr{
+    color: #fff;
+}
+

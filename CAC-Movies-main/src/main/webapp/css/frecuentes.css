@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+header{
+    background-color: #9f3647;
+    height: 15dvh;
+    padding: 30px;
+    text-align: center;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+header div a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Body */
+
+main {
+    background-color: #181419;
+    height: 85dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acordeon {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.acordeon-item {
+    background-color: #847588;
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.acordeon-button {
+    background: #171717;
+    border: none;
+    outline: none;
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.acordeon-button:hover {
+    background: #47404952;
+}
+
+.acordeon-content {
+    padding: 15px;
+    display: none;
+    border-top: 1px solid #dddddd21;
+}
+
+@media (max-width: 1300px) {
+    .acordeon {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 980px) {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .acordeon {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 560px) {
+    .acordeon {
+        max-width: 300px;
+    }
+    .acordeon-button { 
+        font-size: 0.8rem;
+    }
+}
